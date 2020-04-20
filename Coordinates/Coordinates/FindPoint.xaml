@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Coordinates.FindPoint">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Entry x:Name="Coordinates" Placeholder="DDMMSS.ssNDDDMMSS.ssE/DD.d...NDDD.d...E" TextChanged="Coordinates_TextChanged" />
+            <Entry x:Name="Bearing" Placeholder="True bearing AAA.aa" TextChanged="Bearing_TextChanged" />
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="Dist" Placeholder="Distande in NM" TextChanged="Dist_TextChanged" />
+                <CheckBox x:Name="km_check" IsChecked="False" />
+                <Label Text="KM" />
+            </StackLayout>
+            <Button x:Name="Calc" Text="GO" Clicked="Calc_Clicked" />
+            <Label x:Name="NewPoint" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

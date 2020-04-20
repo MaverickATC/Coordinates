@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Coordinates.BrowseDB">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="points" ItemsSource="{Binding}" ItemTapped="Points_ItemTapped" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <SwitchCell x:Name="sc" Text="{Binding Name}" On="{Binding Show}">
+
+                        </SwitchCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="show" Text="Show Map" Clicked="Show_Clicked" />
+                <Button x:Name="cancelBtn" Text="To Menu" Clicked="CancelBtn_Clicked" />
+                <CheckBox x:Name="showCoords" IsChecked="False" />
+                <Label Text="View coordinates on click" />
+                <Button x:Name="save" Text="Save to PDF" Clicked="save_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

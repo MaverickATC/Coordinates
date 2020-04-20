@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Coordinates.MainPage">
+
+    <StackLayout Spacing="10">
+        <!-- Place new controls here -->
+        <!--<Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />-->
+
+        <Button Text="Find Point" x:Name="fPoint" Clicked="FPoint_Clicked"/>
+        <Button Text="Find Multiple Points" x:Name="fMultPoints" Clicked="FMultPoints_Clicked"/>
+        <Button Text="Find Full Approach" x:Name="fFullApp" Clicked="FFullApp_Clicked"/>
+        
+        <Button Text="Map" x:Name="cmap" Clicked="Cmap_Clicked"/>
+
+        <Button Text="Add point" x:Name="add" Clicked="Add_Clicked"/>
+        <Button Text="Browse DB" x:Name="db" Clicked="Db_Clicked"/>
+        <Button Text="About" x:Name="about" Clicked="About_Clicked" VerticalOptions="End"/>
+        
+    </StackLayout>
+
+</ContentPage>
